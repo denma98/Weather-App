@@ -29,7 +29,7 @@
         import java.util.Date
         import java.util.Locale
 
-        //96e2e2d2e3cd6c22982de9d6160b23cc
+        //
         class MainActivity : AppCompatActivity() {
             private lateinit var selectDateButton: Button
             private lateinit var weatherDao: WeatherDao
@@ -66,7 +66,7 @@
                     .baseUrl("https://api.openweathermap.org/data/2.5/")
                     .build().create(ApiInterface::class.java)
     
-                val response = retrofit.getWeatherData(CityName, "96e2e2d2e3cd6c22982de9d6160b23cc", "metric")
+                val response = retrofit.getWeatherData(CityName, "API_KEY", "metric")
     
                 response.enqueue(object : Callback<WeatherApp> {
                     @SuppressLint("SetTextI18n")
@@ -138,7 +138,7 @@
                     .baseUrl("https://api.openweathermap.org/data/2.5/")
                     .build().create(ApiInterface::class.java)
     
-                val response = retrofit.getWeatherData(CityName, "96e2e2d2e3cd6c22982de9d6160b23cc", "metric")
+                val response = retrofit.getWeatherData(CityName, "API_KEY", "metric")
     
                 response.enqueue(object : Callback<WeatherApp>{
                     @SuppressLint("SetTextI18n")
